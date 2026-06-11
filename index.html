@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DXR3ZNF93N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DXR3ZNF93N');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>V. Shiv Kumar — Senior AI Product Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111111;
+      --border: #1e1e1e;
+      --accent: #c8a96e;
+      --accent2: #7eb8c8;
+      --text: #e8e4dc;
+      --muted: #6b6660;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; opacity: 0.4; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 3rem; backdrop-filter: blur(14px); background: rgba(10,10,10,0.75); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; letter-spacing: 0.04em; color: var(--accent); }
+    .nav-links { display: flex; gap: 2.4rem; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.25s; }
+    .nav-links a:hover { color: var(--accent); }
+
+    section { padding: 6rem 3rem; border-top: 1px solid var(--border); }
+    .section-container { max-width: 1400px; margin: 0 auto; }
+    .section-header { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 3.5rem; }
+    .section-num { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--accent); letter-spacing: 0.1em; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; letter-spacing: -0.02em; }
+    .section-line { flex: 1; height: 1px; background: var(--border); }
+    .section-kicker { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 1rem; text-transform: uppercase; }
+
+    /* HERO */
+    #hero { min-height: 100vh; display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; padding: 8rem 3rem 4rem; gap: 3rem; position: relative; overflow: hidden; border-top: none; }
+    .hero-bg-circle { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(200,169,110,0.07) 0%, transparent 70%); right: -100px; top: 50%; transform: translateY(-50%); pointer-events: none; animation: pulse-glow 6s ease-in-out infinite; }
+    @keyframes pulse-glow { 0%,100%{opacity:.6;transform:translateY(-50%) scale(1)} 50%{opacity:1;transform:translateY(-50%) scale(1.08)} }
+
+    .hero-left { position: relative; z-index: 1; }
+    .hero-label { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
+    .hero-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.2rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1rem; opacity: 0; animation: fadeUp 0.8s ease 0.35s forwards; }
+    .hero-name span { color: var(--accent); font-weight: 600; }
+    .hero-title { font-family: 'DM Mono', monospace; font-size: 0.85rem; color: var(--muted); letter-spacing: 0.06em; margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s ease 0.5s forwards; }
+    .hero-desc { font-size: 1.05rem; line-height: 1.8; color: #a09890; max-width: 620px; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.8s ease 0.65s forwards; }
+    .hero-ctas { display: flex; gap: 1rem; opacity: 0; animation: fadeUp 0.8s ease 0.8s forwards; }
+    
+    .btn { display: inline-block; padding: 0.75rem 1.8rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; transition: all 0.25s; cursor: pointer; }
+    .btn-primary { background: var(--accent); color: #0a0a0a; border: 1px solid var(--accent); }
+    .btn-primary:hover { background: transparent; color: var(--accent); }
+    .btn-outline { border: 1px solid var(--border); color: var(--muted); background: transparent; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hero-right { position: relative; z-index: 1; opacity: 0; animation: fadeIn 1s ease 0.9s forwards; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .stat-box { background: var(--surface); padding: 1.6rem; transition: background 0.25s; display: flex; flex-direction: column; justify-content: space-between; min-height: 155px; }
+    .stat-box:hover { background: #161616; }
+    .stat-number { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 600; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; }
+    .stat-label { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: #a09890; line-height: 1.4; font-weight: 400; }
+    .stat-context { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: auto; padding-top: 0.4rem; }
+
+    /* ABOUT GRID */
+    .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: start; }
+    .about-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 4vw, 3.8rem); line-height: 1.1; margin-bottom: 2rem; font-weight: 300; }
+    .about-copy { font-size: 1.05rem; line-height: 1.8; color: #a09890; margin-bottom: 1.5rem; }
+    .about-right { display: flex; flex-direction: column; gap: 1rem; }
+    .insight-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem 1.6rem; transition: all 0.25s ease; }
+    .insight-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .insight-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.3rem; font-weight: 400; color: var(--accent); }
+    .insight-card p { color: #a09890; font-size: 0.9rem; }
+
+    /* ROADMAP */
+    #roadmap { background: var(--surface); }
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--border); }
+    .tl-item { position: relative; margin-bottom: 2.5rem; opacity: 0; transform: translateX(-20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .tl-item.visible { opacity: 1; transform: translateX(0); }
+    .tl-dot { position: absolute; left: -2.27rem; top: 0.4rem; width: 10px; height: 10px; border-radius: 50%; background: var(--border); border: 1px solid var(--muted); transition: background 0.5s 0.3s, border-color 0.5s 0.3s; }
+    .tl-item.visible .tl-dot { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 8px rgba(200,169,110,0.4); }
+    .tl-phase { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.25rem; }
+    .tl-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; margin-bottom: 0.3rem; letter-spacing: -0.01em; }
+    .tl-desc { font-size: 0.9rem; color: var(--muted); max-width: 720px; margin-bottom: 0.7rem; line-height: 1.7; }
+    .tl-bar-wrap { height: 2px; background: var(--border); max-width: 420px; }
+    .tl-bar { height: 100%; background: var(--accent); width: 0; transition: width 1.3s cubic-bezier(0.4,0,0.2,1) 0.4s; }
+    .tl-bar.accent2 { background: var(--accent2); }
+    .tl-item.visible .tl-bar { width: var(--w); }
+
+    /* EXPERIENCE */
+    .exp-item { display: grid; grid-template-columns: 240px 1fr; gap: 3rem; padding: 2.5rem 0; border-bottom: 1px solid var(--border); opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .exp-item.visible { opacity: 1; transform: translateY(0); }
+    .exp-item:last-child { border-bottom: none; }
+    .exp-period { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.5rem; }
+    .exp-company { font-size: 0.85rem; color: var(--muted); font-family: 'DM Mono', monospace; text-transform: uppercase; letter-spacing: 0.05em; }
+    .exp-role { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; margin-bottom: 1rem; letter-spacing: -0.01em; }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .exp-bullets li { font-size: 0.95rem; color: #a09890; padding-left: 1.2rem; position: relative; line-height: 1.7; }
+    .exp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--accent); font-size: 0.7rem; }
+    .exp-highlight { color: var(--text); font-weight: 500; }
+
+    /* SKILLS */
+    #skills { background: var(--surface); }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .skill-category { background: var(--bg); padding: 2rem; opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .skill-category.visible { opacity: 1; transform: translateY(0); }
+    .skill-cat-title { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border); }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skill-tag { padding: 0.3rem 0.75rem; border: 1px solid var(--border); font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.05em; color: var(--muted); transition: all 0.2s; }
+    .skill-tag:hover { border-color: var(--accent); color: var(--accent); background: rgba(200,169,110,0.05); }
+
+    /* CERTS */
+    .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+    .cert-card { border: 1px solid var(--border); padding: 1.5rem; background: var(--surface); transition: border-color 0.25s, transform 0.25s; position: relative; overflow: hidden; opacity: 0; transform: translateY(12px); }
+    .cert-card.visible { opacity: 1; transform: translateY(0); }
+    .cert-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--accent); opacity: 0; transition: opacity 0.25s; }
+    .cert-card:hover { border-color: var(--accent); transform: translateX(4px) !important; }
+    .cert-card:hover::before { opacity: 1; }
+    .cert-name { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.3rem; color: var(--text); }
+    .cert-date { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--accent); letter-spacing: 0.08em; }
+
+    /* PHILOSOPHY */
+    #philosophy { background: var(--bg); }
+    .philosophy-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 4vw, 3.8rem); line-height: 1.1; margin-bottom: 3rem; font-weight: 300; }
+    .philosophy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .philosophy-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2.2rem; min-height: 240px; transition: border-color 0.25s; }
+    .philosophy-card:hover { border-color: var(--accent); }
+    .philosophy-number { display: inline-block; font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 400; color: var(--accent); margin-bottom: 1rem; }
+    .philosophy-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 0.8rem; line-height: 1.3; font-weight: 400; color: var(--text); }
+    .philosophy-card p { color: #a09890; line-height: 1.7; font-size: 0.95rem; }
+
+    /* CONTACT */
+    #contact { background: var(--surface); text-align: center; }
+    .contact-inner { max-width: 600px; margin: 0 auto; }
+    .contact-tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; margin-bottom: 1rem; line-height: 1.2; }
+    .contact-tagline em { color: var(--accent); font-style: normal; }
+    .contact-sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 2.5rem; }
+    .contact-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+    .contact-link { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; transition: all 0.2s; }
+    .contact-link:hover { color: var(--accent); border-color: var(--accent); }
+
+    footer { padding: 2rem 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); letter-spacing: 0.08em; }
+
+    /* PROJECTS */
+    #projects { background: var(--bg); }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .project-card { background: var(--surface); padding: 2rem; position: relative; overflow: hidden; opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease, background 0.25s; }
+    .project-card.visible { opacity: 1; transform: translateY(0); }
+    .project-card:hover { background: #161616; }
+    .project-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease; }
+    .project-card:hover::after { transform: scaleX(1); }
+    .project-card-tag { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .project-card-tag.tag-blue { color: var(--accent2); }
+    .project-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 0.75rem; letter-spacing: -0.01em; line-height: 1.2; }
+    .project-card p { font-size: 0.88rem; color: #a09890; line-height: 1.75; margin-bottom: 1.25rem; }
+    .project-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; }
+    .project-pill { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.06em; padding: 0.25rem 0.65rem; border: 1px solid var(--border); color: var(--muted); transition: all 0.2s; }
+    .project-card:hover .project-pill { border-color: #2e2e2e; color: #7a7672; }
+    .project-impact { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 1rem; padding: 0.4rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .project-impact.blue { color: var(--accent2); border-color: rgba(126,184,200,0.2); }
+
+    @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+    @media(max-width:900px){
+      nav{padding:1.2rem 1.5rem} .nav-links{gap:1.5rem}
+      #hero{grid-template-columns:1fr;padding:7rem 1.5rem 3rem}
+      section, #roadmap{padding:4rem 1.5rem}
+      .about-grid, .philosophy-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .exp-item{grid-template-columns:1fr;gap:.5rem}
+      footer{flex-direction:column;gap:.5rem;text-align:center}
+    }
+    @media(max-width:600px){.nav-links{display:none}}
+
+    /* ════════════════════════════════════════════════════════════════
+       CHATBOT STYLES — embedded from chatbot-widget.html
+       ════════════════════════════════════════════════════════════════ */
+    
+    /* ── FAB button ── */
+    #sk-chat-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+    }
+
+    #sk-fab-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #c9a84c 0%, #e8c97e 100%);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(201, 168, 76, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    #sk-fab-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(201, 168, 76, 0.55);
+    }
+    #sk-fab-btn svg { width: 24px; height: 24px; fill: #0a0a0f; }
+
+    /* ── Chat window ── */
+    #sk-chat-window {
+      position: fixed;
+      bottom: 96px;
+      right: 28px;
+      width: 360px;
+      max-height: 520px;
+      border-radius: 16px;
+      background: #13131a;
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 9998;
+      opacity: 0;
+      transform: translateY(16px) scale(0.97);
+      pointer-events: none;
+      transition: opacity 0.22s ease, transform 0.22s ease;
+    }
+    #sk-chat-window.open {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: all;
+    }
+
+    /* ── Header ── */
+    .sk-header {
+      background: linear-gradient(135deg, #1a1608 0%, #16140e 100%);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+    }
+    .sk-avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #c9a84c, #e8c97e);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 600; color: #0a0a0f; font-size: 14px;
+      flex-shrink: 0;
+    }
+    .sk-header-text { flex: 1; }
+    .sk-header-name { font-size: 14px; font-weight: 600; color: #e8c97e; }
+    .sk-header-sub  { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 1px; }
+    .sk-close-btn {
+      background: none; border: none; cursor: pointer;
+      color: rgba(255,255,255,0.4); padding: 4px;
+      border-radius: 4px; transition: color 0.15s;
+    }
+    .sk-close-btn:hover { color: rgba(255,255,255,0.8); }
+
+    /* ── Messages ── */
+    #sk-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(201,168,76,0.2) transparent;
+    }
+    .sk-msg {
+      max-width: 88%;
+      padding: 9px 12px;
+      border-radius: 12px;
+      font-size: 13px;
+      line-height: 1.5;
+      word-break: break-word;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    }
+    .sk-msg.bot {
+      background: #1e1e2a;
+      color: #d4d4e8;
+      border-bottom-left-radius: 4px;
+      align-self: flex-start;
+      border: 1px solid rgba(201,168,76,0.1);
+    }
+    .sk-msg.user {
+      background: linear-gradient(135deg, #c9a84c, #b8962e);
+      color: #0a0a0f;
+      border-bottom-right-radius: 4px;
+      align-self: flex-end;
+      font-weight: 500;
+    }
+
+    /* typing dots */
+    .sk-typing { display: flex; gap: 4px; align-items: center; padding: 12px; }
+    .sk-typing span {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(201,168,76,0.6);
+      animation: sk-bounce 1.2s infinite;
+    }
+    .sk-typing span:nth-child(2) { animation-delay: 0.2s; }
+    .sk-typing span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes sk-bounce {
+      0%, 80%, 100% { transform: translateY(0); }
+      40%           { transform: translateY(-6px); }
+    }
+
+    /* ── Input area ── */
+    .sk-input-row {
+      padding: 12px;
+      border-top: 1px solid rgba(201,168,76,0.12);
+      display: flex;
+      gap: 8px;
+      background: #0f0f16;
+    }
+    #sk-input {
+      flex: 1;
+      background: #1a1a24;
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-size: 13px;
+      color: #e0e0f0;
+      outline: none;
+      resize: none;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      transition: border-color 0.15s;
+      min-height: 38px;
+      max-height: 80px;
+    }
+    #sk-input::placeholder { color: rgba(255,255,255,0.3); }
+    #sk-input:focus { border-color: rgba(201,168,76,0.45); }
+
+    #sk-send-btn {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #c9a84c, #b8962e);
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; align-self: flex-end;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+    #sk-send-btn:hover { opacity: 0.88; transform: scale(1.05); }
+    #sk-send-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+    #sk-send-btn svg { width: 16px; height: 16px; fill: #0a0a0f; }
+
+    /* ── Responsive ── */
+    @media (max-width: 420px) {
+      #sk-chat-window { width: calc(100vw - 24px); right: 12px; }
+      #sk-chat-fab    { right: 16px; bottom: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">V. Shiv Kumar</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#philosophy">Philosophy</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg-circle"></div>
+  <div class="hero-left">
+    <p class="hero-label">Senior Product Manager · GTM Systems</p>
+    <h1 class="hero-name">V. <span>Shiv</span><br>Kumar</h1>
+    <p class="hero-title">MongoDB · UKG · Accenture · 12+ Years</p>
+    <p class="hero-desc">
+      Senior Product Manager specializing in AI-powered GTM systems, Salesforce platform strategy, enterprise workflow transformation, and revenue-focused automation for global SaaS organizations.
+    </p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-primary">Get in Touch</a>
+      <a href="#experience" class="btn btn-outline">View Work</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-number" data-target="25" data-suffix="K+">25K+</div>
+        <div class="stat-label">Global Sales Users Managed</div>
+        <div class="stat-context">Accenture and MongoDB</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="22" data-suffix="%">22%</div>
+        <div class="stat-label">Lead Conversion Growth (2 Qtrs)</div>
+        <div class="stat-context">MongoDB Impact</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="500" data-suffix="K+" data-thousands="true">500K+</div>
+        <div class="stat-label">Annual Savings via Tech Consolidation</div>
+        <div class="stat-context">33% tool reduction</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="75" data-suffix="%">75%</div>
+        <div class="stat-label">Sales TAT Reduction</div>
+        <div class="stat-context">Acquisition-to-Growth Automation</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="15" data-suffix="%">0%</div>
+        <div class="stat-label">YoY Expansion in Strategic Accounts</div>
+        <div class="stat-context">Multi-territory Architecture · MongoDB</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="35" data-suffix="%">0%</div>
+        <div class="stat-label">Qualified Sales Pipeline Boost (NBM)</div>
+        <div class="stat-context">Accenture Impact</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-container about-grid">
+    <div class="about-left">
+      <p class="section-kicker">ABOUT</p>
+      <h2 class="about-heading">Product leadership with a system builder's mindset.</h2>
+      <p class="about-copy">
+        Senior Product Manager with 12+ years building and scaling GTM systems for high-growth SaaS companies. I lead cross-functional teams across Product, Sales, Marketing, Customer Success, and Engineering to deliver Salesforce-anchored platforms, AI-driven automation, and workflow redesigns that improve revenue and operational efficiency.
+      </p>
+      <p class="about-copy">
+        My work sits at the intersection of strategy and execution: customer interviews, persona-aware workflows, A/B-tested rollouts, AI-assisted automation, and ruthless tech-stack rationalization. I've shipped 0-to-1 products, consolidated enterprise tooling, and embedded AI into day-to-day GTM operations for global organizations.
+      </p>
+    </div>
+    <div class="about-right">
+      <div class="insight-card">
+        <h3>Cross-functional leadership</h3>
+        <p>Product, Sales, Marketing, CS, Engineering</p>
+      </div>
+      <div class="insight-card">
+        <h3>Strategic thinking</h3>
+        <p>Roadmaps, GTM architecture, workflow redesign</p>
+      </div>
+      <div class="insight-card">
+        <h3>Scaling systems</h3>
+        <p>25000+ user, global rollouts</p>
+      </div>
+      <div class="insight-card">
+        <h3>Automation mindset</h3>
+        <p>AI workflows, process optimization, tool consolidation</p>
+      </div>
+      <div class="insight-card">
+        <h3>Measurable outcomes</h3>
+        <p>Revenue impact, lead conversion, NPS, cost reduction</p>
+      </div>
+      <div class="insight-card">
+        <h3>Stakeholder management</h3>
+        <p>C-suite, GTM leaders, engineering teams</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="roadmap" class="section">
+  <section>
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Career Trajectory</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-phase">Dec 2013 — Mar 2019 · Accenture</div>
+        <div class="tl-title">Foundation: CRM Architecture &amp; Enterprise Scale</div>
+        <div class="tl-desc">Served as trusted advisor to enterprise stakeholder groups, translating complex requirements into solution designs. Led a landmark Salesforce Lightning rollout boosting system performance for 25,000+ global users and architected New Business Meeting (NBM) solutions that grew qualified pipeline by 35%.</div>
+        <div class="tl-bar-wrap"><div class="tl-bar" style="--w:55%"></div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-phase">Mar 2019 — Jun 2022 · Ultimate Kronos Group (UKG)</div>
+        <div class="tl-title">Growth: Customer Support Products &amp; Enterprise Mergers</div>
+        <div class="tl-desc">Spearheaded Service Cloud case management integrations during the major corporate merger. Orchestrated 100+ successful enhancements across distributed teams, slashing the ad-hoc product backlog by 90% and cutting case resolution time by 23%. Managed top-tier online support communities.</div>
+        <div class="tl-bar-wrap"><div class="tl-bar" style="--w:72%"></div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-phase">Jun 2022 — Present · MongoDB</div>
+        <div class="tl-title">Scale: AI Automation &amp; Global GTM Strategy</div>
+        <div class="tl-desc">Directing end-to-end GTM infrastructure and roadmap optimization for 1,500+ global sales and CS users. Driving tool consolidation to achieve $500K+ in annual recurring savings, slashing sales turnaround time by 75% via custom workflow transformation, and increasing lead conversion metrics by 22%.</div>
+        <div class="tl-bar-wrap"><div class="tl-bar" style="--w:95%"></div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-phase">Next · Open to Opportunities</div>
+        <div class="tl-title">Vision: VP / Director of Product · AI &amp; GTM Systems</div>
+        <div class="tl-desc">Seeking to command a product organization focused on AI applications, enterprise architecture optimization, and next-generation revenue operations to orchestrate high-yield system playbooks.</div>
+        <div class="tl-bar-wrap"><div class="tl-bar accent2" style="--w:22%"></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="experience">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Experience</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="experience-list">
+    <div class="exp-item">
+      <div class="exp-meta"><div class="exp-period">Jun 2022 — Present</div><div class="exp-company">MongoDB</div></div>
+      <div class="exp-content">
+        <h3 class="exp-role">Senior Product Manager</h3>
+        <ul class="exp-bullets">
+          <li>Designed and launched a new <span class="exp-highlight">acquisition-to-growth handoff workflow</span> that minimized friction, reducing Sales Turnaround Time (TAT) by <span class="exp-highlight">75%</span> with direct positive impact on cross-selling/upselling revenue.</li>
+          <li>Led Go-To-Market strategy and global roadmap execution, structuring persona-aware workflows and unified UI/UX layouts that optimized end-to-end architectures for <span class="exp-highlight">1,500+ global sales and customer success users</span>, elevating Net Promoter Score (NPS) by over <span class="exp-highlight">50%</span>.</li>
+          <li>Optimized lead flows and operational conversions via strategic simplifications inside LeanData and the elimination of legacy rules inside Q-Assign, advancing lead conversions by <span class="exp-highlight">22% in two quarters</span>.</li>
+          <li>Implemented multi-territory architecture for strategic POD accounts with account-level splits, driving <span class="exp-highlight">15% YoY expansion</span> within strategic accounts.</li>
+          <li>Deployed AI agents (Agentforce) for CS and automation solutions that successfully reclaimed <span class="exp-highlight">1,000+ work hours per quarter</span> across CS and operations.</li>
+          <li>Combated enterprise tool sprawl across GTM, Marketing, and Legal business units to achieve a <span class="exp-highlight">~33% reduction in tooling licenses</span>, driving over <span class="exp-highlight">$500K in annual cost savings</span>.</li>
+          <li>Managed top-of-funnel technical CRM updates following the acquisition of Voyage AI, achieving <span class="exp-highlight">98% data integrity rate</span> within a quarter with zero workflow downtime.</li>
+          <li>Managed matrixed product engineering groups composed of Business Analysts, QA Specialists, Administrators, and Platform Developers to foster collaborative delivery and maintain healthy product health scores.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-meta"><div class="exp-period">Mar 2019 — Jun 2022</div><div class="exp-company">Ultimate Kronos Group (UKG)</div></div>
+      <div class="exp-content">
+        <h3 class="exp-role">Lead Business Systems Analyst</h3>
+        <ul class="exp-bullets">
+          <li>Steered core Customer Support features by updating underlying workflows and platform tooling, decreasing overall customer case resolution times by <span class="exp-highlight">40%</span>.</li>
+          <li>Spearheaded the design, scoping, and release of <span class="exp-highlight">100+ cross-functional enhancements</span>, collaborating actively with globally distributed development squads to completely dissolve the ad-hoc support backlog by more than <span class="exp-highlight">90%</span>.</li>
+          <li>Executed extensive Service Cloud Case Management system unifications when Kronos Inc. and Ultimate Software merged into UKG, safeguarding operational continuity with zero customer churn.</li>
+          <li>Supervised vendor integration strategies encompassing Jira zAgile, LivePerson, Gainsight, and inContact, streamlining cross-platform synchronization and minimizing legacy administrative overhead.</li>
+          <li>Managed the official Kronos Community space, which achieved a <span class="exp-highlight">#2 Global Ranking</span> for corporate enterprise communities running on Salesforce Community Cloud.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-meta"><div class="exp-period">Dec 2013 — Mar 2019</div><div class="exp-company">Accenture</div></div>
+      <div class="exp-content">
+        <h3 class="exp-role">Sr. Business &amp; Integration Architecture Analyst</h3>
+        <ul class="exp-bullets">
+          <li>Acted as a core Business Analyst and strategic platform architect across multiple enterprise sectors, converting complex functional requirements into robust solution designs.</li>
+          <li>Orchestrated a massive, global Salesforce Lightning transition initiative, boosting core usability and driving full platform adoption across a user base of <span class="exp-highlight">25,000+ global personnel</span>.</li>
+          <li>Designed and launched proprietary New Business Meeting (NBM) solutions balancing platform desirability, operational deliverability, and contract winnability to augment the client's qualified sales pipeline by <span class="exp-highlight">over 35%</span>.</li>
+          <li>Automated heavily manual operations through backend system integrations, modernizing technical architecture and diminishing time-to-value metrics.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Key Projects Portfolio</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-card-tag">MongoDB · 2022–2024</div>
+      <h3>Acquisition-to-Growth Handoff Workflow</h3>
+      <div class="project-impact">↓ 75% Sales TAT · Direct Revenue Impact</div>
+      <p>Identified a critical gap where MongoDB was losing cross-sell and upsell opportunities post customer acquisition. Flew to the USA to run on-site requirements workshops, then designed and launched a new Salesforce handoff workflow that eliminated friction between acquisition and growth motions.</p>
+      <div class="project-meta">
+        <span class="project-pill">Salesforce</span><span class="project-pill">Workflow Design</span><span class="project-pill">Revenue Ops</span><span class="project-pill">User Research</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-tag tag-blue">Personal Project · 2026</div>
+      <h3>Vibe Coded Sales Tracker App</h3>
+      <div class="project-impact blue">0-to-1 · Solo-built · Shipped end-to-end</div>
+      <p>Built a full sales tracker android app and an admin dashboard from scratch using AI-assisted vibe coding. Designed the UX, wrote the logic, and shipped a working product independently. Demonstrates hands-on product instincts beyond just managing roadmaps: the ability to go from idea to live tool, solo!</p>
+      <div class="project-meta">
+        <span class="project-pill">React</span><span class="project-pill">Claude API</span><span class="project-pill">Vibe Coding</span><span class="project-pill">0-to-1</span><span class="project-pill">Solopreneurship</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-tag">MongoDB · 2023</div>
+      <h3>GTM Tech Sprawl Reduction Program</h3>
+      <div class="project-impact">↓ 35% Tools · $500K+ Annual Savings</div>
+      <p>Audited the full GTM, Marketing, and Legal technology stack to identify redundancy and licence overlap. Drove a strategic consolidation program that eliminated roughly a third of all tools while preserving capability — delivering over half a million dollars in verified annual savings.</p>
+      <div class="project-meta">
+        <span class="project-pill">Vendor Strategy</span><span class="project-pill">Cost Optimisation</span><span class="project-pill">GTM Systems</span><span class="project-pill">Stakeholder Mgmt</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-tag">MongoDB · 2022–2023</div>
+      <h3>Lead Flow &amp; Conversion Overhaul</h3>
+      <div class="project-impact">↑ 22% Lead Conversion in 2 Quarters</div>
+      <p>Partnered with Marketing Ops to untangle years of accumulated routing logic inside LeanData and Q-Assign. Simplified the end-to-end lead flow, eliminated redundant branching rules, and re-tested assignments — resulting in a 22% lift in lead conversion within two quarters of release.</p>
+      <div class="project-meta">
+        <span class="project-pill">LeanData</span><span class="project-pill">Marketing Ops</span><span class="project-pill">Lead Routing</span><span class="project-pill">Process Redesign</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-tag">UKG · 2021</div>
+      <h3>Kronos–UKG Merger CRM Integration</h3>
+      <div class="project-impact">Zero Customer Churn · Zero Operational Disruption</div>
+      <p>Owned the Service Cloud Case Management workstream during the high-stakes Kronos–Ultimate merger, ensuring both customer records and support workflows migrated cleanly to the unified UKG platform. Managed the Kronos Community — independently ranked #2 globally for enterprise Salesforce communities — through the transition.</p>
+      <div class="project-meta">
+        <span class="project-pill">M&amp;A Integration</span><span class="project-pill">Service Cloud</span><span class="project-pill">Change Management</span><span class="project-pill">Community Cloud</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-tag">Accenture · 2017–2019</div>
+      <h3>NBM Solutions Framework</h3>
+      <div class="project-impact">↑ 35%+ Qualified Sales Pipeline</div>
+      <p>Designed and built the New Business Meeting (NBM) Solutions framework — a three-pillar model evaluating Desirability, Deliverability, and Winnability for every sales pursuit. Embedded it into the Salesforce workflow, giving sales teams a structured lens for prioritizing and winning deals. Grew the qualified pipeline by over 35%.</p>
+      <div class="project-meta">
+        <span class="project-pill">Sales Enablement</span><span class="project-pill">Framework Design</span><span class="project-pill">Salesforce</span><span class="project-pill">Pipeline Strategy</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Skills</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-category">
+      <div class="skill-cat-title">Product &amp; Strategy</div>
+      <div class="skill-tags">
+        <span class="skill-tag">GTM Strategy</span><span class="skill-tag">Roadmapping</span><span class="skill-tag">0-to-1 Products</span><span class="skill-tag">Agile / Scrum</span><span class="skill-tag">User Story Definition</span><span class="skill-tag">Requirements Gathering</span><span class="skill-tag">KPI &amp; Metrics</span><span class="skill-tag">Stakeholder Mgmt</span><span class="skill-tag">User Interviews</span><span class="skill-tag">Solution Design</span><span class="skill-tag">Data-Driven Decisions</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-title">CRM &amp; Platforms</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Salesforce CRM</span><span class="skill-tag">Agentforce</span><span class="skill-tag">Jira</span><span class="skill-tag">Monday.com</span><span class="skill-tag">ServiceNow</span><span class="skill-tag">Gainsight</span><span class="skill-tag">SharePoint</span><span class="skill-tag">Confluence</span><span class="skill-tag">Data Loader</span><span class="skill-tag">Workbench</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-title">AI &amp; Design</div>
+      <div class="skill-tags">
+        <span class="skill-tag">ChatGPT</span><span class="skill-tag">Claude</span><span class="skill-tag">Gemini</span><span class="skill-tag">Glean</span><span class="skill-tag">Figma</span><span class="skill-tag">Lucidchart</span><span class="skill-tag">Product Design &amp; UX</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-title">Technical &amp; Processes</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Apex Basics</span><span class="skill-tag">SOQL / SQL</span><span class="skill-tag">C++</span><span class="skill-tag">SaaS Development</span><span class="skill-tag">Tech Stack Rationalisation</span><span class="skill-tag">Vendor Management</span><span class="skill-tag">Process Optimisation</span><span class="skill-tag">Sales Lifecycle Management</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Certifications</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="certs-grid">
+    <div class="cert-card"><div class="cert-name">AI for Product Management — Pendo</div><div class="cert-date">May 2026</div></div>
+    <div class="cert-card"><div class="cert-name">AI Tools Workshop — Be10x</div><div class="cert-date">May 2026</div></div>
+    <div class="cert-card"><div class="cert-name">Salesforce Sales Cloud Consultant</div><div class="cert-date">June 2024</div></div>
+    <div class="cert-card"><div class="cert-name">Salesforce Advanced Administrator</div><div class="cert-date">May 2023</div></div>
+    <div class="cert-card"><div class="cert-name">Salesforce Certified Associate</div><div class="cert-date">May 2023</div></div>
+    <div class="cert-card"><div class="cert-name">Salesforce Platform App Builder</div><div class="cert-date">August 2021</div></div>
+    <div class="cert-card"><div class="cert-name">Salesforce Service Cloud Consultant</div><div class="cert-date">September 2020</div></div>
+    <div class="cert-card"><div class="cert-name">ITIL v4 Certification</div><div class="cert-date">May 2019</div></div>
+    <div class="cert-card"><div class="cert-name">Salesforce Administrator</div><div class="cert-date">January 2018</div></div>
+    <div class="cert-card"><div class="cert-name">Business Analysis Foundation — BCS Certified</div><div class="cert-date">May 2015</div></div>
+  </div>
+</section>
+
+<section id="philosophy">
+  <div class="section-container">
+    <p class="section-kicker">LEADERSHIP &amp; PHILOSOPHY</p>
+    <h2 class="philosophy-heading">How I think about product &amp; growth.</h2>
+    <div class="philosophy-grid">
+      <div class="philosophy-card">
+        <span class="philosophy-number">01</span>
+        <h3>Customer-centric, not customer-flattering</h3>
+        <p>The strongest product decisions come from understanding the user's actual workflow — not just feature requests. I optimize for the core job-to-be-done.</p>
+      </div>
+      <div class="philosophy-card">
+        <span class="philosophy-number">02</span>
+        <h3>Operational efficiency is a product feature</h3>
+        <p>Every removed click, collapsed handoff, or simplified layout directly protects corporate revenue pipelines and significantly improves execution speed.</p>
+      </div>
+      <div class="philosophy-card">
+        <span class="philosophy-number">03</span>
+        <h3>AI as leverage, not theater</h3>
+        <p>AI earns its place within the enterprise stack when it programmatically removes manual steps, optimizes key decisions, or scalingly upgrades output.</p>
+      </div>
+      <div class="philosophy-card">
+        <span class="philosophy-number">04</span>
+        <h3>Build for scale from day one</h3>
+        <p>Persona-aware layouts, clean transactional data architectures, and transparent metric tracking prevent platform re-writes down the road.</p>
+      </div>
+      <div class="philosophy-card">
+        <span class="philosophy-number">05</span>
+        <h3>Revenue alignment over feature output</h3>
+        <p>Product roadmaps should map directly into quantifiable results: expanding pipelines, conversion boosts, retention rates, and structural cost optimizations.</p>
+      </div>
+      <div class="philosophy-card">
+        <span class="philosophy-number">06</span>
+        <h3>Execution is the strategy</h3>
+        <p>Logical roadmap sequencing, high tactical visibility, ruthless priority tracking, and rapid iteration outperform bloated slide decks every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-inner">
+    <h2 class="contact-tagline">Let's build something <em>remarkable</em> together.</h2>
+    <p class="contact-sub">Open to senior product and global GTM leadership opportunities.</p>
+    <div class="contact-links">
+      <a href="mailto:90shivkumar@gmail.com" class="contact-link">90shivkumar@gmail.com</a>
+      <a href="tel:+919962280214" class="contact-link">+91 99622 80214</a>
+      <a href="https://linkedin.com/in/90shivkumar" target="_blank" class="contact-link">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-copy">© 2026 V. Shiv Kumar — All rights reserved.</span>
+  <span class="footer-copy">Senior AI Product Manager · GTM Systems</span>
+</footer>
+
+<!-- ════════════════════════════════════════════════════════════════
+     CHATBOT WIDGET — embedded inline
+     ════════════════════════════════════════════════════════════════ -->
+<div id="sk-chat-fab">
+  <!-- FAB toggle button -->
+  <button id="sk-fab-btn" aria-label="Chat with Shiv's AI assistant">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-2 10H6V10h12v2zm0-3H6V7h12v2z"/>
+    </svg>
+  </button>
+
+  <!-- Chat window -->
+  <div id="sk-chat-window" role="dialog" aria-label="Chat with Shiv Kumar's AI">
+    <!-- Header -->
+    <div class="sk-header">
+      <div class="sk-avatar">SK</div>
+      <div class="sk-header-text">
+        <div class="sk-header-name">Ask about Shiv</div>
+        <div class="sk-header-sub">AI assistant · answers about Shiv only</div>
+      </div>
+      <button class="sk-close-btn" id="sk-close-btn" aria-label="Close chat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Messages -->
+    <div id="sk-messages">
+      <div class="sk-msg bot">
+        👋 Hi! I'm Shiv's AI assistant. Ask me about his experience, skills, projects, or certifications!
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div class="sk-input-row">
+      <textarea
+        id="sk-input"
+        placeholder="Ask something about Shiv…"
+        rows="1"
+        aria-label="Your message"
+      ></textarea>
+      <button id="sk-send-btn" aria-label="Send message">
+        <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- ════════════════════════════════════════════════════════════════ -->
+
+<script>
+  // ── CHATBOT CONFIG ──────────────────────────────────────────────
+  // Replace with your actual Cloudflare Worker URL (including https://)
+  const PROXY_URL = "https://solitary-rice-4f24.90shivkumar.workers.dev";
+  // ────────────────────────────────────────────────────────────────
+
+  const fab        = document.getElementById("sk-fab-btn");
+  const chatWindow = document.getElementById("sk-chat-window");
+  const closeBtn   = document.getElementById("sk-close-btn");
+  const messagesEl = document.getElementById("sk-messages");
+  const input      = document.getElementById("sk-input");
+  const sendBtn    = document.getElementById("sk-send-btn");
+
+  let isOpen = false;
+  let conversationHistory = [];
+  let isLoading = false;
+
+  // Toggle chat
+  function toggleChat() {
+    isOpen = !isOpen;
+    chatWindow.classList.toggle("open", isOpen);
+    if (isOpen) { setTimeout(() => input.focus(), 250); }
+  }
+  fab.addEventListener("click", toggleChat);
+  closeBtn.addEventListener("click", toggleChat);
+
+  // Auto-resize textarea
+  input.addEventListener("input", () => {
+    input.style.height = "auto";
+    input.style.height = Math.min(input.scrollHeight, 80) + "px";
+  });
+
+  // Send on Enter (Shift+Enter for newline)
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+  sendBtn.addEventListener("click", sendMessage);
+
+  function appendMessage(role, text) {
+    const div = document.createElement("div");
+    div.className = `sk-msg ${role === "user" ? "user" : "bot"}`;
+    div.textContent = text;
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return div;
+  }
+
+  function showTyping() {
+    const div = document.createElement("div");
+    div.className = "sk-msg bot sk-typing-wrapper";
+    div.innerHTML = `<div class="sk-typing"><span></span><span></span><span></span></div>`;
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return div;
+  }
+
+  async function sendMessage() {
+    const text = input.value.trim();
+    if (!text || isLoading) return;
+
+    // Clear input
+    input.value = "";
+    input.style.height = "auto";
+
+    // Show user message
+    appendMessage("user", text);
+
+    // Add to history
+    conversationHistory.push({ role: "user", content: text });
+
+    // Disable send
+    isLoading = true;
+    sendBtn.disabled = true;
+
+    // Show typing indicator
+    const typingEl = showTyping();
+
+    try {
+      const res = await fetch(PROXY_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: conversationHistory }),
+      });
+
+      typingEl.remove();
+
+      if (!res.ok) {
+        console.error("Response status:", res.status);
+        const errorData = await res.text();
+        console.error("Error response:", errorData);
+        appendMessage("bot", "Sorry, something went wrong. Please try again.");
+        conversationHistory.pop();
+        return;
+      }
+
+      const data = await res.json();
+      const reply = data.reply || "Sorry, I didn't get a response.";
+
+      appendMessage("bot", reply);
+      conversationHistory.push({ role: "assistant", content: reply });
+
+      // Keep history manageable (last 20 turns)
+      if (conversationHistory.length > 20) {
+        conversationHistory = conversationHistory.slice(-20);
+      }
+
+    } catch (err) {
+      typingEl.remove();
+      console.error("Fetch error:", err);
+      appendMessage("bot", "Network error — please check your connection and that your Cloudflare Worker URL is correct.");
+      conversationHistory.pop();
+    } finally {
+      isLoading = false;
+      sendBtn.disabled = false;
+      input.focus();
+    }
+  }
+</script>
+<!-- ════════════════════════════════════════════════════════════════ -->
+
+<script>
+/* 1. KPI COUNTER */
+function runCounter(el) {
+  const target = +el.dataset.target;
+  const prefix = el.dataset.prefix || '';
+  const suffix = el.dataset.suffix || '';
+  const isThousands = el.dataset.thousands;
+  const decimals = el.dataset.decimals ? +el.dataset.decimals : 0;
+  const dur = 1600, step = 16, steps = dur / step;
+  let cur = 0;
+  const inc = target / steps;
+  const t = setInterval(() => {
+    cur = Math.min(cur + inc, target);
+    let displayVal;
+    if (decimals > 0) {
+      displayVal = cur.toFixed(decimals);
+    } else {
+      let val = Math.round(cur);
+      if (isThousands) val = (val >= 1000 ? (val/1000).toFixed(1).replace('.0','') + 'K' : val);
+      displayVal = val;
+    }
+    el.textContent = prefix + displayVal + suffix;
+    if (cur >= target) clearInterval(t);
+  }, step);
+}
+const statsObs = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+    document.querySelectorAll('[data-target]').forEach(runCounter);
+    statsObs.disconnect();
+  }
+}, { threshold: 0.2 });
+statsObs.observe(document.querySelector('.stats-grid'));
+
+/* 2. SCROLL REVEAL — roadmap, experience, skills, certs */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.tl-item, .exp-item, .skill-category, .cert-card, .project-card').forEach(el => revealObs.observe(el));
+</script>
+</body>
+</html>
