@@ -1,0 +1,77 @@
+Shiv Kumar
+Senior Technical AI Product Manager – GTM Systems
++91-9962280214  |  90shivkumar@gmail.com  |  linkedin.com/in/90shivkumar  | Website: shivkumar90.github.io/PM
+PROFESSIONAL SUMMARY
+Senior Technical AI Product Manager with 12+ years of experience driving AI-powered Salesforce platform strategy, GTM transformation and enterprise workflow optimization across global organizations. Proven track record of improving sales productivity, accelerating lead conversion, reducing operational costs, building 0-to-1 products and scaling CRM ecosystems for high-growth SaaS businesses. 
+Experienced in leading cross-functional teams across Product, Sales, Marketing, Customer Success and Engineering to deliver scalable solutions that improve revenue outcomes. Strong expertise in Salesforce, GTM systems, AI automation, product strategy, roadmap execution, stakeholder management, and enterprise process transformation.
+Independent Venture: Vibe coded my own product to track sales reps on ground, using Gen AI.                 
+CORE COMPETENCIES
+
+Salesforce CRM + Agentforce
+GTM Strategy & Roadmapping
+Artificial Intelligence Solutions
+Sales Lifecycle Management
+Agile / Waterfall Methodologies
+User Interviews
+Product Design,  UI/UX
+Solution Design
+0-to-1 Product Development
+Data-Driven Decision Making
+KPI & Performance Metrics
+Vendor Management
+Cross-functional collaboration
+Process Optimization
+PRD, User Story Definition
+Design Thinking
+SaaS Development
+Merger & Acquisition
+Team Management
+Stakeholder Management
+Project Management
+
+PROFESSIONAL EXPERIENCE
+Senior AI Product Manager 	June 2022 – Present
+MongoDB 
+Designed and launched a new acquisition-to-growth handoff automation to ensure MDB is not losing out on cross selling/upselling opportunities. Travelled to USA to conduct a requirement gathering workshop. Impact: Sales TAT reduced by 75% resulting in direct impact on revenue.
+Implemented multi-territory architecture from ideation to launch for large, strategic (POD) accounts with Account level splits. Impact: More than 15% YoY expansion within strategic accounts.  
+Led Go-To-Market (GTM) strategy and roadmap execution, designing persona-aware workflows and unified UI /UX that optimized processes for 1,500+ sales and customer success users globally via  A/B testing and iterative releases. Impact: Improved NPS by more than 50% for Salesforce users.
+Improved lead flow and conversion by simplifying the existing processes and workflows in LeanData and eliminating legacy logic in Q-Assign. Impact: Lead conversion improved by 22% in two quarters.
+Evaluated Agenforce and implemented AI Agents for CS and automation solutions that eliminated redundant manual tasks. Impact: Saved 1,000+ work hours quarterly for CS and Ops.
+Reduced Tech Sprawl across GTM, Marketing, and Legal business units.  Impact: Reduced tools/licences by ~33% through strategic consolidation of redundant tools and licenses, saving over $500K annually.
+Handled top of the funnel changes post acquisition of Voyage AI for MongoDB for smooth selling. Impact: Achieved a 98% data integrity rate for Voyage AI assets in Salesforce within a quarter, ensuring zero downtime for Sales and Marketing workflows.   
+Created detailed PRDs for multiple projects for Sales, Solution Consulting, CSM, and Partner overlay teams, ensuring high-impact, cost-effective solutions by brainstorming & working closely with engineers.
+Managed various teams of Business Analysts, Developers, Admins, QAs for delivering quality solutions while maintaining a positive work environment. 
+
+
+Lead Business Systems Analyst 	March 2019 – June 2022
+Ultimate Kronos Group (UKG)
+Led strategic Customer Support product initiatives through process redesign, tooling improvements, and tighter cross-functional collaboration. Impact: Reduced case resolution time by 40%
+Handled Case Management (Service Cloud) aspects when Kronos Inc. merged with Ultimate Software to become UKG. Impact: Strategic project for merger requiring no customer churn or disruption.
+Revamped the ideas module and developed comprehensive metrics to evaluate our product performance. Impact: Enabled data-driven analytics for executive stakeholders.
+Briefly managed the Kronos Community which was ranked #2 Online Community running on the Salesforce Community (now Experience) Cloud in 2020 by Community consultancy Feverbee.
+Spearheaded 100+ successful cross-functional enhancements involving developers, QA, and business analysts across distributed teams, focusing on OKRs, delivering on-time and within scope. Impact: Cleared the adhoc requests product backlog by more than 90%.
+Managed vendor integrations across Jira zAgile, LivePerson, Gainsight, and inContact, optimizing system efficiency and reducing manual operational overhead.
+Sr. Business and Integration Architecture Analyst 	December 2013 – March 2019
+Accenture
+Led the Salesforce Lightning rollout, boosting system performance, improving usability, and driving measurable gains. Impact: Improved Salesforce adoption for 25000+ users globally.
+Built New Business Meeting (NBM) Solutions focused on 3 major aspects of desirability, deliverability and winnability. Impact: Helped grow the qualified Sales pipeline by more than 35%.
+Designed and launched Contact 360 for Sales reps to find complete prospect/customer information on the go. Impact: The solution saw steady increase in adoption within the sales org with positive NPS.
+Orchestrated CRM infrastructure enhancements by integrating platforms and automating manual processes, improving operational efficiency and reducing time-to-value for business users.
+CERTIFICATIONS
+AI for Product Management by Pendo	May 2026
+AI Tools Workshop Be10x 	May 2026
+ITIL v4 Certification	May 2019
+Business Analysis Foundation, BCS Certified	May 2015
+Salesforce certifications - 7
+Admin, Advanced Admin, Service Cloud, Platform App Builder, Sales Cloud Consultant, 
+TECHNICAL SKILLS
+CRM & Platforms: Salesforce, Jira, Monday.com, ServiceNow, SharePoint, Confluence, Gainsight, Slack, Data Loader, Workbench, SAP Successfactors, Okta etc. 
+AI/ML & Productivity Tools: Experienced with Perplexity, Agentic AI, Glean AI, Loveable, NotebookLM etc. and LLMs like ChatGPT, Gemini, Claude for prototyping, GTM automation and productivity gains. 
+Design & Collaboration: Figma, Lucidchart, Google & Microsoft Suite (Word, Excel, PowerPoint, Teams)
+Technical Language Basics: Apex, SOQL, SQL, C++
+Methodologies: Agile / Scrum, Waterfall
+EDUCATION
+Bachelor of Technology – Electronics & Communication Engineering 
+Bharati Vidyapeeth's College of Engineering (GGSIPU)  |  Delhi, India
+HOBBIES
+ Reading (esp. novels), playing (badminton & with my PS4), Gardening, TED talks, Psychology
